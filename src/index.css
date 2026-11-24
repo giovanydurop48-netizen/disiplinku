@@ -1,0 +1,29 @@
+:root{--bg:#f8fafc;--sf:#fff;--sf2:#f1f5f9;--tx:#0f172a;--mu:#64748b;--bd:#e2e8f0;--pr:#4f46e5;--prt:#fff;--okb:#ecfdf5;--ok:#15803d;--wb:#fff7ed;--wn:#c2410c;--bb:#fef2f2;--bad:#b91c1c;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1120;--sf:#111827;--sf2:#1e293b;--tx:#f8fafc;--mu:#94a3b8;--bd:#334155;--pr:#818cf8;--prt:#0b1120;--okb:#052e1a;--ok:#4ade80;--wb:#431407;--wn:#fb923c;--bb:#450a0a;--bad:#f87171;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1120;--sf:#111827;--sf2:#1e293b;--tx:#f8fafc;--mu:#94a3b8;--bd:#334155;--pr:#818cf8;--prt:#0b1120;--okb:#052e1a;--ok:#4ade80;--wb:#431407;--wn:#fb923c;--bb:#450a0a;--bad:#f87171;color-scheme:dark}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;min-height:100%}
+button,input,select{font:inherit;color:inherit}button{cursor:pointer}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--sf);border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;padding:12px 20px;gap:10px;flex-wrap:wrap}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700}.logo{width:36px;height:36px;border-radius:9px;background:var(--pr);color:var(--prt);display:grid;place-items:center;font-size:13px}
+.wrap{max-width:1150px;margin:auto;padding:22px 20px 60px}
+.tabs{display:flex;gap:6px;overflow-x:auto;margin-bottom:18px}
+.tab{border:1px solid var(--bd);background:var(--sf);color:var(--mu);padding:8px 14px;border-radius:8px;white-space:nowrap}.tab.on{background:var(--pr);color:var(--prt);border-color:var(--pr)}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:12px;padding:18px}
+.card h3{font-size:15px;margin-bottom:4px}.sub{color:var(--mu);font-size:12.5px;margin-bottom:12px}
+.stat b{display:block;font-size:28px;margin-top:6px}.stat span{color:var(--mu);font-size:12px}
+.btn{border:1px solid var(--bd);background:var(--sf);border-radius:8px;padding:8px 12px;font-size:13px}.btn:hover{background:var(--sf2)}
+.btn.p{background:var(--pr);color:var(--prt);border-color:var(--pr)}.btn.d{color:var(--bad)}
+.in{height:40px;padding:0 12px;border:1px solid var(--bd);border-radius:8px;background:var(--sf);width:100%}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.row>.in{flex:1;min-width:130px}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:13.5px}th{text-align:left;color:var(--mu);font-weight:600;font-size:12px}th,td{padding:10px 8px;border-bottom:1px solid var(--bd);white-space:nowrap}
+.bd{padding:3px 9px;border-radius:99px;font-size:12px;font-weight:600;background:var(--sf2);color:var(--mu)}.bd.ok{background:var(--okb);color:var(--ok)}.bd.warn{background:var(--wb);color:var(--wn)}.bd.bad{background:var(--bb);color:var(--bad)}
+.lb{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--bd);font-size:14px}.lb:last-child{border:0}.rk{width:24px;height:24px;border-radius:50%;background:var(--sf2);display:grid;place-items:center;font-size:12px;font-weight:700}
+.bar{height:8px;background:var(--sf2);border-radius:9px;overflow:hidden;flex:1}.bar i{display:block;height:100%;background:var(--pr)}
+.warnbox{background:var(--wb);color:var(--wn);border-radius:9px;padding:10px 12px;margin-bottom:8px;font-size:13px;display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.login{min-height:100vh;display:grid;place-items:center;padding:20px}.login .card{width:100%;max-width:400px;padding:28px}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 16px;border-radius:9px;font-size:13px;z-index:9}
+.big{height:54px;font-size:18px;text-align:center;letter-spacing:2px}
+textarea.in{height:110px;padding:10px;font-family:monospace;font-size:12px}
+a.btn{text-decoration:none;display:inline-block}
